@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora</title>
+	<style>
+		/* Center the calculadora */
+		.container {
+			width: 400px;
+			margin: 40px auto;
+			background-color: #f0f0f0;
+			padding: 30px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		
+		/* Make the buttons larger */
+		input[type="button"] {
+			width: 60px;
+			height: 40px;
+			font-size: 24px;
+			margin: 5px;
+			background-color: #4CAF50; /* Green background color */
+			color: #ffffff; /* White text color */
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		input[type="button"]:hover {
+			background-color: #3e8e41; /* Darker green background color on hover */
+		}
+		
+		/* Make the result display larger */
+		#result {
+			width: 350px;
+			height: 30px;
+			font-size: 24px;
+			padding: 10px;
+			text-align: right;
+			background-color: #f7f7f7; /* Light gray background color */
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h2 style="color: #00698f;">Calculator</h2> <!-- Blue text color for the title -->
+		<form>
+			<input type="text" id="result" readonly>
+			<table>
+				<tr>
+					<td><input type="button" value="7" onclick="document.getElementById('result').value += '7'"></td>
+					<td><input type="button" value="8" onclick="document.getElementById('result').value += '8'"></td>
+					<td><input type="button" value="9" onclick="document.getElementById('result').value += '9'"></td>
+					<td><input type="button" value="/" onclick="document.getElementById('result').value += '/'"></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="4" onclick="document.getElementById('result').value += '4'"></td>
+					<td><input type="button" value="5" onclick="document.getElementById('result').value += '5'"></td>
+					<td><input type="button" value="6" onclick="document.getElementById('result').value += '6'"></td>
+					<td><input type="button" value="*" onclick="document.getElementById('result').value += '*'"></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="1" onclick="document.getElementById('result').value += '1'"></td>
+					<td><input type="button" value="2" onclick="document.getElementById('result').value += '2'"></td>
+					<td><input type="button" value="3" onclick="document.getElementById('result').value += '3'"></td>
+					<td><input type="button" value="-" onclick="document.getElementById('result').value += '-'"></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="0" onclick="document.getElementById('result').value += '0'"></td>
+					<td><input type="button" value="." onclick="document.getElementById('result').value += '.'"></td>
+					<td><input type="button" value="=" onclick="document.getElementById('result').value = eval(document.getElementById('result').value)"></td>
+					<td><input type="button" value="+" onclick="document.getElementById('result').value += '+'"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
